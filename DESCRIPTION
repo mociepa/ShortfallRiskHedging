@@ -1,12 +1,12 @@
 Package: ShortfallRiskHedging
-Title: Shortfall Risk Hedging for european option
+    Title: Shortfall Risk Hedging for european option
 Version: 0.0.0.9000
 Authors@R: 
-    person("Michal", "Ociepa", , "michal.ociepa97@gmail.com", role = c("aut", "cre"))
+	person("Michal", "Ociepa", , "michal.ociepa97@gmail.com", role = c("aut", "cre"))
 Description: "Shortfall risk hedging" is a hedge that minimizes shortfall risk i.e. minimizes the expected shortfall value weighted by some loss function. 
-The whole theory is included in my master's thesis, available or soon available on github.
-The package allows to find, calculate and hedge modified call or put option using the theoretical formulas calculated in a master thesis.
-The package also contains simple numerical algorithms, which allows to estimate and hedge modified european contingent when the original option is path independent.
+	The whole theory is included in my master's thesis, available or soon available on github.
+	The package allows to find, calculate and hedge modified call or put option using the theoretical formulas calculated in a master thesis.
+	The package also contains simple numerical algorithms, which allows to estimate and hedge modified european contingent when the original option is path independent.
 License: use_mit_license()
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
