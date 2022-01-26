@@ -45,9 +45,9 @@ Payoff of this modified put option is:
 }
 }
 \examples{
-Xi_put_price_explicit(100, 100, 0, 0.5, 0.05, 2,  0, 1, 105)
-Xi_put_price_explicit(c(100, 120), 100, 0, 0.3, 0.05, 2, 0, 1, 105)
-Xi_put_price_explicit(c(100, 120), 100, 0, 0.3, 0.05, 2, c(0, 0.5), 1, 105)
+put_price_explicit(100, 100, 0, 0.5, 0.05, 2, 0, 1, 105)
+put_price_explicit(c(100, 120), 100, 0, 0.3, 0.05, 2, 0, 1, 105)
+put_price_explicit(c(100, 120), 100, 0, 0.3, 0.05, 2, c(0, 0.5), 1, 105)
 
 
 
