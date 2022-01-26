@@ -1,5 +1,5 @@
 Package: ShortfallRiskHedging
-    Title: Shortfall Risk Hedging for european option
+Title: Shortfall Risk Hedging for european option
 Version: 0.0.0.9000
 Authors@R: 
 	person("Michal", "Ociepa", , "michal.ociepa97@gmail.com", role = c("aut", "cre"))
