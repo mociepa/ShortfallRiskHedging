@@ -1,0 +1,23 @@
+#' @title Calculate gains/losses
+#' 
+#' @description 
+#' The losses function calculate gains/losses between portfolio and option price. 
+#' 
+#' @usage losses(option_value, portfolio)
+#' 
+#' @param option_value numeric vector, price of the option over time.
+#' @param portfolio numeric vector, value of the portfolio over time.
+#' @return A numeric vector, gains/losses during hedging.
+#' 
+#' @examples 
+#' x <- generate_scenarios(100, 0.05, 0.3) #real measure
+#' time_period <- seq(0, 1, 1/250)
+#' option <- call_price(x[, 1], 100, 0, 0.3, time_period, 1)
+#' Xi <- Xi_call_price(x[, 1], 100, 0, 0.3, time_period, 1)
+#' portfolio <- portfolio_valuation(option, 0, Xi, x[, 1])
+#' losses(option, portfolio)
+#' @export
+
+losses <- function(option_value, portfolio){
+  return(portfolio - option_value)
+}
