@@ -22,7 +22,7 @@ A numeric value, estimated value of the option.
 The calculate_option_value function calculate option value using Monte Carlo simulations.
 }
 \examples{
-x <- generate_scenarios(100, 0, 0.3)
+X <- generate_scenarios(100, 0, 0.3)
 payoff <- calculate_payoffs(X, call_payoff, strike = 100)
 calculate_option_value(payoff, 0)
 
