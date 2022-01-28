@@ -4,7 +4,7 @@
 \alias{False_position_method}
 \title{False position method}
 \usage{
-False_position_method(V0, a0, b0, FUN, ..., epsilon = 1e-7)
+False_position_method(option_value, a0, b0, FUN, ..., epsilon = 1e-7)
 }
 \arguments{
 \item{option_value}{numeric value, price of the modified option.}

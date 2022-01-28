@@ -4,20 +4,20 @@
 \alias{portfolio_valuation}
 \title{Calculate payoffs from trajectories}
 \usage{
-portfolio_valuation(option_value, rate, xi, asset_price, End_Time = 1, initial_capital = 0)
+portfolio_valuation(option_value, rate, Xi, asset_price, End_Time = 1, initial_capital = 0)
 }
 \arguments{
-\item{option_value}{numeric vector, price of the option over time.}
+\item{option_value}{numeric value, option price at the beginning of the simulations.}
 
 \item{rate}{numeric value, risk free rate in the model, rate >= 0.}
+
+\item{Xi}{numeric vector, number of asset needed to hedge an option over time.}
 
 \item{asset_price}{numeric vector, price oft the asset over time.}
 
 \item{End_Time}{numeric value, end time of the option.}
 
 \item{initial_capital}{numeric value, the amount of money we want to add to the portfolio at time 0.}
-
-\item{Xi}{numeric vector, number of asset needed to hedge an option over time.}
 }
 \value{
 A numeric vector, value of the hedging portfolio over time.
@@ -37,5 +37,5 @@ x <- generate_scenarios(100, 0.05, 0.3) #real measure
 time_period <- seq(0, 1, 1/250)
 option <- call_price(x[, 1], 100, 0, 0.3, time_period, 1)
 Xi <- Xi_call_price(x[, 1], 100, 0, 0.3, time_period, 1)
-portfolio_valuation(option, 0, Xi, x[, 1])
+portfolio_valuation(option[1], 0, Xi, x[, 1])
 }

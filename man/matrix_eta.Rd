@@ -4,10 +4,12 @@
 \alias{matrix_eta}
 \title{Hedging of the option}
 \usage{
-matrix_eta(option_matrix, Xi_matrix_matrix, ds, dt, I, rate)
+matrix_eta(option_matrix, Xi_matrix, ds, dt, I, rate)
 }
 \arguments{
 \item{option_matrix}{numeric matrix, value of the option.}
+
+\item{Xi_matrix}{numeric matrix, number of asset needed to hedge an option.}
 
 \item{ds}{numeric value, step size of the asset price.}
 
@@ -16,8 +18,6 @@ matrix_eta(option_matrix, Xi_matrix_matrix, ds, dt, I, rate)
 \item{I}{numeric value, number of steps in the stock price.}
 
 \item{rate}{numeric value, risk free rate in the model rate >= 0.}
-
-\item{Xi_matrix}{numeric matrix, number of asset needed to hedge an option.}
 }
 \value{
 A numeric matrix, amount of money needed to hedge an option claim using finite difference algorithms.

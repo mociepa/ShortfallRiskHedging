@@ -33,6 +33,6 @@ calculate_option_value(payoff, 0)
 asian_call <- function(asset_price, strike){
   return(mean(asset_price) - min( mean(asset_price), strike ))
   }
-payoff <- calculate_payoffs(X, option_modificate_payoff, const = 110, drift = 0.05, rate = 0, vol = 0.3, p = 1, asian_call, strike = 105)
+payoff <- calculate_payoffs(paths = X, option_modificate_payoff, const = 110, drift = 0.05, rate = 0, vol = 0.3, p = 1, asian_call, strike = 105)
 calculate_option_value(payoff, 0)
 }

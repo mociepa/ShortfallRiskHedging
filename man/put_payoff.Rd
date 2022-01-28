@@ -24,4 +24,5 @@ In the case when strike = 0, option is called european asset or nothing put opti
 x <- generate_scenarios(100, 0, 0.3)
 put_payoff(x[, 1], strike = 100)
 put_payoff(c(100, 120), strike = 107)
+put_payoff(c(100, 120, 107), strike = 107)
 }

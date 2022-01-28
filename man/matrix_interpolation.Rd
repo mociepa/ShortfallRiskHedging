@@ -9,9 +9,9 @@ matrix_interpolation(Value_matrix, ds, dt, I, asset_price, time, End_Time)
 \arguments{
 \item{Value_matrix}{numeric matrix, returns from finite different algorithm or delta_finite_difference function.}
 
-\item{dt}{numeric value, step size of the time.}
-
 \item{ds}{numeric value, step size of the asset price.}
+
+\item{dt}{numeric value, step size of the time.}
 
 \item{I}{numeric value, number of steps in the stock price.}
 
@@ -28,7 +28,7 @@ A numeric vector, interpolated value of option price or numbers of asset when as
 The matrix_interpolation function interpolate values for vector.
 }
 \details{
-If asset price is bigger then I\emph{ds, we take value from this element of the matrix where asset_price = I}ds.
+If asset price is bigger then \eqn{I*ds}, we take value from this element of the matrix where \eqn{asset_price = I*ds}.
 }
 \examples{
 ds <- finding_parameters(100, 0.3, 600, 5)[1]

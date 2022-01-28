@@ -21,4 +21,5 @@ The binary_put_payoff function calculate payoffs from trajectory.
 x <- generate_scenarios(100, 0, 0.3)
 binary_put_payoff(x[, 1], strike = 100)
 binary_put_payoff(c(100, 120), strike = 107)
+binary_put_payoff(c(100, 120, 107), strike = 107)
 }

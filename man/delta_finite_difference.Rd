@@ -27,6 +27,6 @@ ds <- finding_parameters(100, 0.3, 600, 5)[1]
 dt <- finding_parameters(100, 0.3, 600, 5)[2]
 option <- finite_difference_explicit(ds, dt, 600, 0, 0.3, 1, call_payoff, 100)
 delta_finite_difference(option, ds)
-option <- finite_difference_explicit(ds, dt, 600, 0, 0.3, 1, option_modificate_payoff, const = 120, drift = 0.1, vol = 0.3, p = 1, call_payoff, 100)
+option <- finite_difference_explicit(ds, dt, 600, 0, 0.3, 1, FUN = option_modificate_payoff, const = 120, drift = 0.1, vol = 0.3, p = 1, call_payoff, 100, is_modificate = TRUE)
 delta_finite_difference(option, ds)
 }

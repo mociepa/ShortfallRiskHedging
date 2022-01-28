@@ -21,4 +21,5 @@ The binary_call_payoff function calculate payoffs from trajectory.
 x <- generate_scenarios(100, 0, 0.3)
 binary_call_payoff(x[, 1], strike = 100)
 binary_call_payoff(c(100, 120), strike = 107)
+binary_call_payoff(c(100, 120, 107), strike = 107)
 }

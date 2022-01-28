@@ -4,7 +4,7 @@
 \alias{option_linear_payoff}
 \title{Calculate payoff from modificate european option}
 \usage{
-option_linear_payoff(L, asset_price, drift, rate, FUN, ...)
+option_linear_payoff(const, asset_price, drift, rate, FUN, ...)
 }
 \arguments{
 \item{const}{numeric value, parameter of the modified payoff.}

@@ -22,6 +22,6 @@ x <- generate_scenarios(100, 0.05, 0.3) #real measure
 time_period <- seq(0, 1, 1/250)
 option <- call_price(x[, 1], 100, 0, 0.3, time_period, 1)
 Xi <- Xi_call_price(x[, 1], 100, 0, 0.3, time_period, 1)
-portfolio <- portfolio_valuation(option, 0, Xi, x[, 1])
+portfolio <- portfolio_valuation(option[1], 0, Xi, x[, 1])
 losses(option, portfolio)
 }

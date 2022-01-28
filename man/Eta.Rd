@@ -4,7 +4,7 @@
 \alias{Eta}
 \title{Delta hedging for european option}
 \usage{
-Eta(asset, Xi, rate, time)
+Eta(asset, Xi, rate, option_price, time)
 }
 \arguments{
 \item{asset}{a numeric vector of asset prices.}
@@ -29,9 +29,5 @@ Eta(c(100, 120), c(0.5596177, 0.7756962), 0, c(11.92354, 25.44056), 0)
 Eta(c(100, 120), c(0.5596177, 0.8328623), 0, c(11.92354, 22.50378), c(0, 0.5))
 
 
-
-}
-\seealso{
-\url{https://en.wikipedia.org/wiki/Black–Scholes_model}.
 
 }

@@ -15,6 +15,8 @@ call_const(L, strike, drift, rate, vol, p)
 
 \item{rate}{numeric value, risk free rate in the model rate >= 0.}
 
+\item{vol}{numeric value, volatility of the model, vol > 0.}
+
 \item{p, }{numeric value, power of the loss function.}
 }
 \value{

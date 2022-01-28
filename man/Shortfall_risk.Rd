@@ -4,7 +4,7 @@
 \alias{Shortfall_risk}
 \title{Calculate Shortfall risk}
 \usage{
-Shotfall_risk(payoff, modificate_payoff, p, rate, End_Time = 1, is_discounted = FALSE)
+Shortfall_risk(payoff, modificate_payoff, p, rate, End_Time = 1, is_discounted = FALSE)
 }
 \arguments{
 \item{payoff}{a numeric vector of option payoff from trajectory simulations.}

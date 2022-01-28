@@ -9,6 +9,8 @@ call_Newton_concave(L1, strike, drift, rate, vol, p, epsilon = 1e-10)
 \arguments{
 \item{L1}{numeric value, first constant L1 > K.}
 
+\item{strike}{numeric value, strike price for call option.}
+
 \item{drift}{numeric value, drift of the model.}
 
 \item{rate}{numeric value, risk free rate in the model, r >= 0.}
@@ -18,8 +20,6 @@ call_Newton_concave(L1, strike, drift, rate, vol, p, epsilon = 1e-10)
 \item{p}{numeric value, power of the loss function, p > 1.}
 
 \item{epsilon}{numeric value, acceptable calculation error}
-
-\item{const}{numeric value, strike price for call option.}
 }
 \value{
 A numeric value, a second constant for modified call option by concave function.

@@ -15,6 +15,8 @@ put_const(L, strike, drift, rate, vol, p)
 
 \item{rate}{numeric value, risk free rate in the model rate >= 0.}
 
+\item{vol}{numeric value, volatility of the model, vol > 0.}
+
 \item{p, }{numeric value, power of the loss function.}
 }
 \value{
@@ -25,6 +27,6 @@ The put_const function computes a constant from the overall model.
 }
 \examples{
 put_const(110, 100, 0.1, 0, 0.3, 1)
-put_const(110, 100, 0.1, 0, 0.3, 2)
+put_const(90, 100, 0.1, 0, 0.3, 2)
 
 }

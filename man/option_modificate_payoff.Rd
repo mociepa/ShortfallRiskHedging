@@ -35,7 +35,7 @@ Arguments in ... cannot have the same name as any of the other arguments, and ca
 }
 \examples{
 option_modificate_payoff(105.05, c(121.1, 120, 125.4), 0.1, 0.05, 0.3, 1, call_payoff, strike = 105)
-option_modificate_payoff(5.45, c(141.1, 150, 135.4), 0.1, 0.05, 0.3, 3, payoff, strike = 150)
+option_modificate_payoff(5.45, c(141.1, 150, 135.4), 0.1, 0.05, 0.3, 3, put_payoff, strike = 150)
 ## Example with asian call payoff
 asian_call <- function(asset_price, strike){
   return(mean(asset_price) - min( mean(asset_price), strike ))

@@ -24,4 +24,5 @@ In the case when strike = 0, option is called european asset or nothing call opt
 x <- generate_scenarios(100, 0, 0.3)
 call_payoff(x[, 1], strike = 100)
 call_payoff(c(100, 120), strike = 107)
+call_payoff(c(100, 120, 107), strike = 107)
 }

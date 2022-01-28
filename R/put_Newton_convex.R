@@ -1,25 +1,25 @@
 #' @title Finding constant in modified option.
-#' 
-#' @description 
+#'
+#' @description
 #' The put_Newton_convex function is used to find second constant L in modified put option.
-#' 
+#'
 #' @usage put_Newton_convex(L1, strike, drift, rate, vol, p, epsilon = 1e-10)
-#' 
+#'
 #' @param L1 numeric value, first constant L1 > K.
-#' @param const numeric value, strike price for put option.
+#' @param strike numeric value, strike price for put option.
 #' @param drift numeric value, drift of the model.
 #' @param rate numeric value, risk free rate in the model, r >= 0.
 #' @param vol numeric value, volatility of the model, vol > 0.
 #' @param p numeric value, power of the loss function, p > 1.
 #' @param epsilon numeric value, acceptable calculation error
 #' @return A numeric value, a second constant for modified put option by convex function.
-#' 
-#' @details There is a need to be careful when there is a warning message. 
+#'
+#' @details There is a need to be careful when there is a warning message.
 #' It means that a numerical error occurred during the algorithm and the algorithm was terminated without a while loop
-#' 
-#' @examples 
+#'
+#' @examples
 #' put_Newton_convex(70, 100, 0.1, 0, 0.2, 2)
-#' 
+#'
 #' @export
 
 put_Newton_convex <- function(L1, strike, drift, rate, vol, p, epsilon = 1e-10){
@@ -39,7 +39,7 @@ put_Newton_convex <- function(L1, strike, drift, rate, vol, p, epsilon = 1e-10){
   else{
     x <- max(x_pocz - (L1 - x_pocz)/2, epsilon)
   }
-  
+
   n = 0
   if( is.nan(c*x^(k) + x - strike) ){
     warning(paste("NaNs produced. Newton's algorithm was not fully working. Check if const are the same.", "For L1:",
@@ -50,6 +50,6 @@ put_Newton_convex <- function(L1, strike, drift, rate, vol, p, epsilon = 1e-10){
     x <- x - (c*x^(k) + x - strike)/(k*c*x^(k-1) + 1)
     n <- n + 1
   }
-  
+
   return(x)
-} 
+}
