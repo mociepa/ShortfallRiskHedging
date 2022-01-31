@@ -17,9 +17,6 @@ A numeric value, european call option payoff.
 \description{
 The call_payoff function calculate payoffs from trajectory.
 }
-\details{
-In the case when strike = 0, option is called european asset or nothing call option.
-}
 \examples{
 x <- generate_scenarios(100, 0, 0.3)
 call_payoff(x[, 1], strike = 100)

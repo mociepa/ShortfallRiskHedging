@@ -17,9 +17,6 @@ A numeric value, european put option payoff.
 \description{
 The put_payoff function calculate payoffs from trajectory.
 }
-\details{
-In the case when strike = 0, option is called european asset or nothing put option.
-}
 \examples{
 x <- generate_scenarios(100, 0, 0.3)
 put_payoff(x[, 1], strike = 100)

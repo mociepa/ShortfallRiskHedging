@@ -9,7 +9,6 @@
 #' @param strike numeric value, strike price of the option.
 #' @return A numeric value, european call option payoff.
 #'
-#' @details In the case when strike = 0, option is called european asset or nothing call option.
 #'
 #' @examples
 #' x <- generate_scenarios(100, 0, 0.3)

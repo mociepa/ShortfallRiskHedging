@@ -23,8 +23,8 @@
 #' @export
 
 call_Newton_concave <- function(L1, strike, drift, rate, vol, p, epsilon = 1e-10){
-  if (p >= 1 | p <= 0){
-    stop("Wrong p argument. p > 1")
+  if ( p <= 0 | p >= 1 ){
+    stop("Wrong p argument. p is in the range (0, 1)")
   }
   m = drift - rate
   k = m / ( vol^2*(1 - p) )

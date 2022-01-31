@@ -48,7 +48,3 @@ Xi_call_price_linear(c(100, 120), 100, 0, 0.3, 0.05, c(0, 0.5), 1, 120)
 
 
 }
-\seealso{
-\url{https://en.wikipedia.org/wiki/Black–Scholes_model}.
-
-}
