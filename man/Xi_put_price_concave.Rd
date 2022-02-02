@@ -23,9 +23,9 @@ Xi_put_price_concave(asset, strike, rate, vol, drift, p, time, End_Time, L, L2 =
 
 \item{End_Time}{end time of the option, End_time >= time.}
 
-\item{L2}{numeric value, determines option payoff, if L2 = NA, but is needed, function finds it with Newton's algorithm.}
+\item{L}{numeric value, determines option payoff, L > 0.}
 
-\item{L}{numeric value, determines option payoff, see details, L > 0.}
+\item{L2}{numeric value, determines option payoff, if L2 = NA, but is needed, function finds it with Newton's algorithm.}
 }
 \value{
 A numeric vector, number of asset to hedge modification of european put option using concave loss function.
@@ -33,26 +33,11 @@ A numeric vector, number of asset to hedge modification of european put option u
 \description{
 The Xi_put_price_concave function takes parameters from Black-Scholes model and returns a number of stock needed to fully hedge modified european put option.
 }
-\details{
-Payoff of this modified put option is:
-\subsection{\eqn{ 1(asset > L)(asset - strike)^+ }, when \eqn{ drift > rate }.}{
-}
-
-\subsection{\eqn{ 1(asset < L)(asset - strike)^+ }, when \eqn{ drift < rate }.}{
-}
-
-\subsection{\eqn{ L(asset - strike)^+ }, when \eqn{ drift == rate }, of course in this case L <= 1.}{
-}
-}
 \examples{
-Xi_put_price_concave(100, 100, 0, 0.5, 0.05, 0.5,  0, 1, 105)
-Xi_put_price_concave(c(100, 120), 100, 0, 0.3, 0.05, 0.5, 0, 1, 105)
-Xi_put_price_concave(c(100, 120), 100, 0, 0.3, 0.05, 0.5, c(0, 0.5), 1, 105)
+Xi_put_price_concave(100, 100, 0, 0.5, 0.05, 0.5,  0, 1, 54)
+Xi_put_price_concave(c(100, 120), 100, 0, 0.3, 0.05, 0.5, 0, 1, 90)
+Xi_put_price_concave(c(100, 120), 100, 0, 0.3, 0.05, 0.5, c(0, 0.5), 1, 30)
 
 
-
-}
-\seealso{
-\url{https://en.wikipedia.org/wiki/Black–Scholes_model}.
 
 }

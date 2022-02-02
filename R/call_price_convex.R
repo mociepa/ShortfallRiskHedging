@@ -28,6 +28,9 @@
 #' @export
 
 call_price_convex <- function(asset, strike, rate, vol, drift, p, time, End_Time, L, L2 = NA){
+  if (p <= 1){
+    stop("Wrong p argument. p > 1")
+  }
   m <- drift - rate
   k <- m / ( (p-1)*vol^2 )
   tau <- End_Time - time

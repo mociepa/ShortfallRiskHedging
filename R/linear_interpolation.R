@@ -17,9 +17,7 @@
 #' @export
 
 linear_interpolation <- function(x, x1, x2, y1, y2){
-  if (x1 > x | x2 < x){
-    stop("wrong arguments")
-  }
+
   a <- (y1 - y2) / (x1 - x2)
   return( y1 + (x - x1)*a )
 }

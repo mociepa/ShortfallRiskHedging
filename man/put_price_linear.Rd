@@ -31,24 +31,20 @@ The put_price_linear function takes parameters from Black-Scholes model and retu
 }
 \details{
 Payoff of this modified call option is:
-\subsection{\eqn{ 1(asset > L)(asset - strike)^+ }, when \eqn{ drift > rate }.}{
+\subsection{\eqn{ 1(asset > L)(strike - asset)^+ }, when \eqn{ drift > rate }.}{
 }
 
-\subsection{\eqn{ 1(asset < L)(asset - strike)^+ }, when \eqn{ drift < rate }.}{
+\subsection{\eqn{ 1(asset < L)(strike - asset)^+ }, when \eqn{ drift < rate }.}{
 }
 
-\subsection{\eqn{ L(asset - strike)^+ }, when \eqn{ drift == rate }, of course in this case L <= 1.}{
+\subsection{\eqn{ L(strike - asset)^+ }, when \eqn{ drift == rate }, of course in this case L <= 1.}{
 }
 }
 \examples{
-put_price_linear(100, 100, 0, 0.5, 0.05, 0, 1, 120)
-put_price_linear(c(100, 120), 100, 0, 0.3, 0.05, 0, 1, 120)
-put_price_linear(c(100, 120), 100, 0, 0.3, 0.05, c(0, 0.5), 1, 120)
+put_price_linear(100, 100, 0, 0.5, 0.05, 0, 1, 50)
+put_price_linear(c(100, 120), 100, 0, 0.3, 0.05, 0, 1, 90)
+put_price_linear(c(100, 120), 100, 0, 0.3, 0.05, c(0, 0.5), 1, 90)
 
 
-
-}
-\seealso{
-\url{https://en.wikipedia.org/wiki/Black–Scholes_model}.
 
 }

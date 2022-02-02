@@ -16,32 +16,30 @@
 #' @param L2 numeric value, determines option payoff, if L2 = NA, but is needed, function finds it with Newton's algorithm.
 #' @return A numeric vector, number of asset to hedge modification of european put option using x^p loss function.
 #'
-#' @details Payoff of this modified put option is:
-#' ## \eqn{ 1(asset > L)(asset - strike)^+ }, when \eqn{ drift > rate }.
-#' ## \eqn{ 1(asset < L)(asset - strike)^+ }, when \eqn{ drift < rate }.
-#' ## \eqn{ L(asset - strike)^+ }, when \eqn{ drift == rate }, of course in this case L <= 1.
-#'
-#' @seealso \url{https://en.wikipedia.org/wiki/Black–Scholes_model}.
 #'
 #' @examples
-#' put_price_explicit(100, 100, 0, 0.5, 0.05, 2, 0, 1, 105)
-#' put_price_explicit(c(100, 120), 100, 0, 0.3, 0.05, 2, 0, 1, 105)
-#' put_price_explicit(c(100, 120), 100, 0, 0.3, 0.05, 2, c(0, 0.5), 1, 105)
+#' put_price_explicit(100, 100, 0, 0.5, 0.05, 2, 0, 1, 76)
+#' put_price_explicit(c(100, 120), 100, 0, 0.3, 0.05, 2, 0, 1, 35)
+#' put_price_explicit(c(100, 120), 100, 0, 0.3, 0.05, 2, c(0, 0.5), 1, 50)
 #'
 #'
 #'
 #' @export
 
-Xi_put_price_explicit <- function(asset, strike, rate, vol, drift, p, time, End_Time, L1, L2 = NA){
-  if (p == 1){
-    result <- Xi_put_price_linear(asset, strike, rate, vol, drift, time, End_Time, L1)
+Xi_put_price_explicit <- function(asset, strike, rate, vol, drift, p, time, End_Time, L, L2 = NA){
+  if (p <= 0){
+    stop("Wrong p argument. p > 0")
+  }
+
+  else if (p == 1){
+    result <- Xi_put_price_linear(asset, strike, rate, vol, drift, time, End_Time, L)
   }
 
   else if (p < 1){
-    result <- Xi_put_price_concave(asset, strike, rate, vol, drift, p, time, End_Time, L1, L2)
+    result <- Xi_put_price_concave(asset, strike, rate, vol, drift, p, time, End_Time, L, L2)
   }
 
   else{
-    result <- Xi_put_price_convex(asset, strike, rate, vol, drift, p, time, End_Time, L1, L2)
+    result <- Xi_put_price_convex(asset, strike, rate, vol, drift, p, time, End_Time, L, L2)
   }
 }

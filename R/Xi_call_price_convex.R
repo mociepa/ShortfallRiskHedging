@@ -28,10 +28,14 @@
 #' @export
 
 Xi_call_price_convex <- function(asset, strike, rate, vol, drift, p, time, End_Time, L, L2 = NA){
+  if (p <= 1){
+    stop("Wrong p argument. p > 1")
+  }
   m = drift - rate
   k = m / ( vol^2*(p-1) )
   l = 0.5 * vol^2 - rate + 0.5*m / (p-1)
   tau = End_Time - time
+
   if (length(tau) == 1){
     tau <- rep(tau, length(asset))
   }

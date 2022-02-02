@@ -28,6 +28,9 @@
 #' @export
 
 Xi_call_price_concave <- function(asset, strike, rate, vol, drift, p, time, End_Time, L, L2 = NA){
+  if ( p <= 0 | p >= 1 ){
+    stop("Wrong p argument. p is in the range (0, 1)")
+  }
   m = drift - rate
   tau = End_Time - time
   if (length(tau) == 1){
@@ -54,6 +57,7 @@ Xi_call_price_concave <- function(asset, strike, rate, vol, drift, p, time, End_
       L2 <- max(L, L2)
     }
     result1 <- Xi_call_price(asset, strike, rate, vol, time, End_Time) - Xi_call_price(asset, L1, rate, vol, time, End_Time) + Xi_call_price(asset, L2, rate, vol, time, End_Time)
+
     result2 <- Xi_call_price(asset, strike, rate, vol, time, End_Time) - Xi_call_price(asset, L1, rate, vol, time, End_Time) +
       (strike - L1)/(L1*vol*sqrt(tau))* dnorm( d1(asset, L1, rate, vol, time, End_Time) ) +
       Xi_call_price(asset, L2, rate, vol, time, End_Time) + (L2 - strike)/(L2*vol*sqrt(tau))* dnorm( d1(asset, L2, rate, vol, time, End_Time) )

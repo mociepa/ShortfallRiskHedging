@@ -33,26 +33,11 @@ A numeric vector, price of the modification of european put option using x^p los
 \description{
 The put_price_explicit function takes parameters from Black-Scholes model and returns a price of modified european put option.
 }
-\details{
-Payoff of this modified call option is:
-\subsection{\eqn{ 1(asset > L)(asset - strike)^+ }, when \eqn{ drift > rate }.}{
-}
-
-\subsection{\eqn{ 1(asset < L)(asset - strike)^+ }, when \eqn{ drift < rate }.}{
-}
-
-\subsection{\eqn{ L(asset - strike)^+ }, when \eqn{ drift == rate }, of course in this case L <= 1.}{
-}
-}
 \examples{
-put_price_explicit(100, 100, 0, 0.5, 0.05, 2,  0, 1, 105)
-put_price_explicit(c(100, 120), 100, 0, 0.3, 0.05, 2, 0, 1, 105)
-put_price_explicit(c(100, 120), 100, 0, 0.3, 0.05, 2, c(0, 0.5), 1, 105)
+put_price_explicit(100, 100, 0, 0.5, 0.05, 2,  0, 1, 55)
+put_price_explicit(c(100, 120), 100, 0, 0.3, 0.05, 2, 0, 1, 35)
+put_price_explicit(c(100, 120), 100, 0, 0.3, 0.05, 2, c(0, 0.5), 1, 45)
 
 
-
-}
-\seealso{
-\url{https://en.wikipedia.org/wiki/Black–Scholes_model}.
 
 }

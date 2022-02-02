@@ -29,11 +29,11 @@
 portfolio_valuation <- function(option_value, rate, Xi, asset_price, End_Time = 1, initial_capital = 0){
   time <- End_Time / ( length(asset_price) - 1 )
   cash <- rep( 0, times = length(asset_price) )
-  cash[1] <- Eta(asset_price[1], xi[1], rate, option_value, 0) + initial_capital
+  cash[1] <- Eta(asset_price[1], Xi[1], rate, option_value, 0) + initial_capital
   for (i in 2:length(asset_price)) {
-    cash[i] <- cash[i-1]*exp(rate*time) - (xi[i] - xi[i-1])*asset_price[i]
+    cash[i] <- cash[i-1]*exp(rate*time) - (Xi[i] - Xi[i-1])*asset_price[i]
   }
 
-  portfolio <- cash + xi*asset_price
+  portfolio <- cash + Xi*asset_price
   return(portfolio)
 }

@@ -41,14 +41,10 @@ Payoff of this modified call option is:
 }
 }
 \examples{
-Xi_put_price_linear(100, 100, 0, 0.5, 0.05, 0, 1, 120)
-Xi_put_price_linear(c(100, 120), 100, 0, 0.3, 0.05, 0, 1, 120)
-Xi_put_price_linear(c(100, 120), 100, 0, 0.3, 0.05, c(0, 0.5), 1, 120)
+Xi_put_price_linear(100, 100, 0, 0.5, 0.05, 0, 1, 70)
+Xi_put_price_linear(c(100, 120), 100, 0, 0.3, 0.05, 0, 1, 40)
+Xi_put_price_linear(c(100, 120), 100, 0, 0.3, 0.05, c(0, 0.5), 1, 20)
 
 
-
-}
-\seealso{
-\url{https://en.wikipedia.org/wiki/Black–Scholes_model}.
 
 }
