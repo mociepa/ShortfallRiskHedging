@@ -15,10 +15,4 @@ This R package was created for the needs of my master's thesis, it allows to eva
 
 Next steps: 
 
-01.02.2022 - Adding a document, which show an example of how to use the package.
-
-04.02.2022 - Creating the final version 1.00, before submitting the thesis for review.
-
-28.02.2022 - Adding a document with used formulas, and adding a master thesis (in polish) on github.
-
-Soon - translating the thesis into English.
+Adding the English version of the thesis in a few days.
