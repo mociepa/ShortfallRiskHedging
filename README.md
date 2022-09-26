@@ -13,6 +13,7 @@ This R package was created for the needs of my master's thesis, it allows to eva
 
 
 
-Next steps: 
+The english version of the thesis has been added. Also there was a change in a finite difference explicit example. Previously:
+finite_difference_explicit(ds, dt, 600, 0, 0.3, 1, FUN = option_modificate_payoff, const = 120, drift = 0.1, vol = 0.3, p = 1, call_payoff, 100, is_modificate = TRUE)
+there was wrong dimension of the matrix
 
-Adding the English version of the thesis in a few days.
